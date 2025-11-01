@@ -7,12 +7,14 @@ import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/ca
 import Hero from "../../public/hero.jpg"
 
 
+import { signIn } from "next-auth/react";
 
 
+export default  function page(){
 
-export default function page(){
-
-
+  async function handleLogin() {
+   await signIn("github", {redirectTo: "/adm"})
+  }
   return(
     <section className="flex flex-col min-h-scree w-full bg-zinc-100">
         <header className="flex p-2 md:px-50 w-full border-b-2 items-center justify-between">
@@ -23,7 +25,7 @@ export default function page(){
             <h1 className="text-2xl font-bold">ObraFacil</h1>
           </div>
           <div className="gap-3 flex">
-            <Button variant="outline" className="hidden md:flex">Entrar</Button>
+            <Button onClick={handleLogin} variant="outline" className="hidden md:flex">Entrar</Button>
             <Button className="bg-orange-500 hover:bg-orange-600">Teste Gratis</Button>
           </div>
         </header>
@@ -31,6 +33,7 @@ export default function page(){
          <div className="w-full h-screen flex items-center justify-center" > <Image
           src={Hero}
           alt="hero"
+           quality={100}
           className="w-full   absolute opacity-40 h-screen object-cover "
           />
         
