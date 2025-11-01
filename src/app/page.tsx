@@ -1,103 +1,128 @@
+"use client"
+import { Button } from "@/components/ui/button";
+import {  ArrowUpRight, Bot, CheckCircle, HardHat, ImageIcon, User2 } from "lucide-react";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import Hero from "../../public/hero.jpg"
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+
+
+
+export default function page(){
+
+
+  return(
+    <section className="flex flex-col min-h-scree w-full bg-zinc-100">
+        <header className="flex p-2 md:px-50 w-full border-b-2 items-center justify-between">
+          <div className="flex items-center gap-2">
+            <div className="flex bg-orange-400  items-center justify-center size-12 rounded-2xl">
+              <HardHat className="size-8 text-white"/>
+            </div>
+            <h1 className="text-2xl font-bold">ObraFacil</h1>
+          </div>
+          <div className="gap-3 flex">
+            <Button variant="outline" className="hidden md:flex">Entrar</Button>
+            <Button className="bg-orange-500 hover:bg-orange-600">Teste Gratis</Button>
+          </div>
+        </header>
+        <main className="flex flex-col bg-zinc-900">
+         <div className="w-full h-screen flex items-center justify-center" > <Image
+          src={Hero}
+          alt="hero"
+          className="w-full   absolute opacity-40 h-screen object-cover "
+          />
+        
+          <div className="space-y-9 relative max-w-5xl z-10 text-center -mt-8 text-white px-4">
+
+      <div className="flex flex-col  items-center justify-center">
+          <h1 className="md:text-5xl text-2xl items-center  justify-center flex flex-col max-w-xl  font-bold mb-4">
+          Gerencie sua obra com <span className="text-orange-500">ObraFacil</span>
+        </h1>
+        <p className="text-xs md:text-sm text-zinc-200 md:max-w-xl max-w-xs  mb-6">
+         Crie orçamentos profissionais e permita que seus clientes acompanhem cada etapa da obra em tempo real.
+        </p>
+      </div>
+
+          <div className="flex gap-4 items-center justify-center">
+
+             <div className="md:flex hidden
+              text-orange-200 items-center 
+              gap-2 bg-orange-500/40 
+              px-4 py-2 rounded-full backdrop-blur-sm">
+              <CheckCircle />
+              Orçamentos Rapidos
+             </div>
+
+             <div className="md:flex hidden text-orange-200 items-center gap-2 bg-orange-500/40 px-4 py-2 rounded-full backdrop-blur-sm">
+              <CheckCircle />
+              Acompanhamento Online
+             </div>
+
+             <div className="flex text-orange-200 items-center gap-2 bg-orange-500/40 px-4 py-2 rounded-full backdrop-blur-sm">
+              <Bot />
+              Orçamentos Criado Com Ia
+             </div>
+          </div>
+        <div className="flex md:flex-row flex-col gap-4 items-center justify-center ">
+          <Button className=" w-xs h-15 bg-orange-500 hover:bg-orange-600 mt-8">Começar Gratís</Button>
+          <Button variant="outline" className="md:flex hidden h-15 mt-8 text-black">Entrar</Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+        </div>
+         
+        </main>
+
+        <main className="w-full items-center flex justify-center ">
+           <div className="flex flex-col  md:max-w-7xl max-w-2xl px-4">
+            <div className="w-full flex flex-col items-center mb-10 ">
+            <h1 className="md:text-5xl text-2xl mt-20 mb-4 font-semibold tracking-wider text-center">Tudo que você precisa para <span className="text-orange-500">gerir suas obras</span></h1>
+            <p className="md:text-xl text-xs text-zinc-500 max-w-3xl text-center ">Ferramentas profissionais para construtores que valorizam organização e transparência.</p>
+           </div>
+
+           <div className="mt-12 mb-12 w-full grid md:grid-cols-2 gap-12">
+              <Card className="py-10 hover:border-2 hover:border-orange-500 hover:shadow-2xl  hover:shadow-orange-500 transition-all duration-700 ">
+                 <CardHeader className="px-6">
+                  <div className=" mb-4 size-13 flex items-center rounded-md justify-center bg-orange-500">
+                    <Bot className="size-8 text-white" />
+                  </div>
+                  <CardTitle>Orçamentos Criado Com IA</CardTitle>
+                  <CardDescription className="max-w-xl">Orçametos mais limpos e precisos sem erros de digitação atravé de inteligência artificial!</CardDescription>
+                 </CardHeader>
+              </Card>
+              <Card className="py-10 hover:border-2 hover:border-orange-500 hover:shadow-2xl  hover:shadow-orange-500 transition-all duration-700 ">
+                 <CardHeader className="px-6">
+                  <div className="size-13 mb-4 flex items-center rounded-md justify-center bg-orange-500">
+                    <ArrowUpRight className="size-8 text-white" />
+                  </div>
+                  <CardTitle>Acompanhamento em Tempo Real</CardTitle>
+                  <CardDescription className="max-w-md">Seus clientes visualizam o progresso da obra, valores e cronograma sempre atualizados</CardDescription>
+                 </CardHeader>
+              </Card>
+              <Card className="py-10 hover:border-2 hover:border-orange-500 hover:shadow-2xl  hover:shadow-orange-500 transition-all duration-700 ">
+                 <CardHeader className="px-6">
+                  <div className="size-13 mb-4 flex items-center rounded-md justify-center bg-orange-500">
+                    <ImageIcon className="size-8 text-white" />
+                  </div>
+                  <CardTitle>Registro Fotográfico</CardTitle>
+                  <CardDescription className="max-w-sm">Documente cada etapa da obra com fotos organizadas por fase, garantindo transparência total.</CardDescription>
+                 </CardHeader>
+              </Card>
+              <Card className="py-10 hover:border-2 hover:border-orange-500 hover:shadow-2xl  hover:shadow-orange-500 transition-all duration-700 ">
+                 <CardHeader className="px-6">
+                  <div className="size-13 mb-4 flex items-center rounded-md justify-center bg-orange-500">
+                    <User2 className="size-8 text-white" />
+                  </div>
+                  <CardTitle>Portal do Cliente</CardTitle>
+                  <CardDescription className="max-w-sm">Cada cliente tem acesso exclusivo ao andamento de sua obra, recebendo notificações de atualizações.</CardDescription>
+                 </CardHeader>
+              </Card>
+           </div>
+           </div>
+          
+        </main>
+        <footer className="p-4 bg-zinc-900 text-center text-zinc-200">desenvolvido por @Diegodev</footer>
+    </section>
+  )
 }
