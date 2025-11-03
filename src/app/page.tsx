@@ -13,7 +13,7 @@ import { signIn } from "next-auth/react";
 export default  function page(){
 
   async function handleLogin() {
-   await signIn("github", {redirectTo: "/adm"})
+   await signIn("github", {redirectTo: "/admin"})
   }
   return(
     <section className="flex flex-col min-h-scree w-full bg-zinc-100">
