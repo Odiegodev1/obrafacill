@@ -19,6 +19,7 @@ export default  function page(){
     <section className="flex flex-col min-h-scree w-full bg-zinc-100">
         <header className="flex p-2 md:px-50 w-full border-b-2 items-center justify-between">
           <div className="flex items-center gap-2">
+            nobo
             <div className="flex bg-orange-400  items-center justify-center size-12 rounded-2xl">
               <HardHat className="size-8 text-white"/>
             </div>
