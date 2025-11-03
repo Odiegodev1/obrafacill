@@ -1,5 +1,5 @@
+"use client";
 import { Cardcontent } from "@/app/(obrafacil)/admin/_components/Cardcontent";
-import { Button } from "@/components/ui/button";
 import { auth } from "@/lib/auth";
 import { HardHat, HardHatIcon } from "lucide-react";
 import { redirect } from "next/navigation";

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import {  ArrowUpRight, Bot, CheckCircle, HardHat, ImageIcon, User2 } from "lucide-react";
 import Image from "next/image";
