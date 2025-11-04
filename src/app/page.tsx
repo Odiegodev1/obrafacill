@@ -27,7 +27,7 @@ export default  function page(){
           </div>
           <div className="gap-3 flex">
             <Button onClick={handleLogin} variant="outline" className="hidden md:flex">Entrar</Button>
-            <Button className="bg-orange-500 hover:bg-orange-600">Teste Gratis</Button>
+            <Button onClink={handleLogin} className="bg-orange-500 hover:bg-orange-600">Teste Gratis</Button>
           </div>
         </header>
         <main className="flex flex-col bg-zinc-900">
