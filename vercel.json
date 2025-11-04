@@ -1,0 +1,8 @@
+{
+  "buildCommand": "prisma generate && next build",
+  "functions": {
+    "api/**": {
+      "runtime": "nodejs18.x"
+    }
+  }
+}
