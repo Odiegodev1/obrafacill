@@ -1,4 +1,4 @@
-"use client";
+
 import { Cardcontent } from "@/app/(obrafacil)/admin/_components/Cardcontent";
 import { auth } from "@/lib/auth";
 import { HardHat, HardHatIcon } from "lucide-react";
@@ -6,11 +6,13 @@ import { redirect } from "next/navigation";
 import { CreateObra } from "./_components/create_obra";
 
 export default async function AdminPage(){
-
     const session = await auth();
+  
     if(!session?.user){
-        redirect("/")
+      redirect("/")
     }
+
+   
 
     return(
         <section className="flex flex-col  w-full min-h-screen">

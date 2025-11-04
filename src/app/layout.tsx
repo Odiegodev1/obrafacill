@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Sora } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { SessionProvider } from "next-auth/react";
 
 const font = Sora({
   variable: "--font-sora",
@@ -26,8 +27,10 @@ export default function RootLayout({
       <body
         className={`${font.className}  antialiased`}
       >
-        <Toaster />
+        <SessionProvider>
+          <Toaster />
         {children}
+        </SessionProvider>
       </body>
     </html>
   );
